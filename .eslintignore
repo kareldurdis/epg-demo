@@ -1,0 +1,4 @@
+node_modules
+dist
+# force linting files starting with dot
+!.*
