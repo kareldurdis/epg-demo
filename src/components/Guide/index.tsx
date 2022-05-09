@@ -6,7 +6,7 @@ type Props = {
 };
 
 const Guide = ({ epgUrl }: Props) => {
-  const { status, data, error } = useEpg(epgUrl);
+  const { data } = useEpg(epgUrl);
   if (data) {
     console.log(data);
   }

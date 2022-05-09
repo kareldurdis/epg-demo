@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta } from '@storybook/react';
-import Show from './index';
+import Show, { ShowProps } from './index';
 
 export default {
   title: 'Guide/Show',
@@ -25,6 +25,6 @@ export default {
   },
 } as ComponentMeta<typeof Show>;
 
-export const Default = ({ title, start, end }) => {
+export const Default = ({ title, start, end }: ShowProps) => {
   return <Show title={title} start={start} end={end} />;
 };

@@ -7,9 +7,10 @@
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
   "scripts": {
-    "build": "parcel build",
+    "build": "rm -rf ./dist && parcel build",
     "build-storybook": "build-storybook",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.d.ts",
+    "lint:fix": "npm run lint -- --fix",
     "storybook": "start-storybook -p 6006",
     "watch": "parcel watch",
     "start:mock-service": "./node_modules/.bin/osprey-mock-service -f ./node_modules/nm-mock-api/demo.raml -p 1337 --cors",

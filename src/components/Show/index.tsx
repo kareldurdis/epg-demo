@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import classNames from 'classnames';
 import * as classes from './styles.module.css';
 
-type Props = {
+export type ShowProps = {
   title: string;
   start: string;
   end: string;
@@ -11,7 +11,7 @@ type Props = {
 
 const MINUTE_SIZE = 9;
 
-const Show = ({ title, start, end }: Props) => {
+const Show = ({ title, start, end }: ShowProps) => {
   const startDate = dayjs(start);
   const endDate = dayjs(end);
   const now = dayjs();
