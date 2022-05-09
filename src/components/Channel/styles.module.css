@@ -1,0 +1,13 @@
+.channel {
+  background-color: #1a1a1a;
+  width: 150px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.channel img {
+  width: 100px;
+}
