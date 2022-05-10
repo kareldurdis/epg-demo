@@ -18,11 +18,12 @@ const Show = ({ title, start, end }: ShowProps) => {
   const isActive = now.isAfter(startDate) && now.isBefore(endDate);
 
   const duration = endDate.diff(startDate, 'minutes');
+  const showWidth = duration * MINUTE_SIZE;
 
   return (
     <div
       className={classNames(classes.show, isActive ? classes.active : undefined)}
-      style={{ width: duration * MINUTE_SIZE }}
+      style={{ width: showWidth, minWidth: showWidth, maxWidth: showWidth }}
     >
       <span className={classes.title}>{title}</span>
       <span className={classes.time}>

@@ -1,0 +1,4 @@
+.channelRow {
+  display: flex;
+  flex-direction: row;
+}
