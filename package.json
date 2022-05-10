@@ -13,6 +13,7 @@
     "lint:fix": "npm run lint -- --fix",
     "storybook": "start-storybook -p 6006",
     "watch": "parcel watch",
+    "start:mock-images": "http-server ./mocks",
     "start:mock-service": "./node_modules/.bin/osprey-mock-service -f ./node_modules/nm-mock-api/demo.raml -p 1337 --cors",
     "start:mock-api": "node ./node_modules/nm-mock-api/scripts/updateEpg.js && npm run start:mock-service"
   },
@@ -50,6 +51,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "http-server": "^14.1.0",
     "nm-mock-api": "github:NoriginMedia/mock-api#cloudberry",
     "parcel": "^2.5.0",
     "parcel-transformer-ts-css-modules": "^1.0.14",

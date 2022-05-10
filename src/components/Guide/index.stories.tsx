@@ -19,7 +19,20 @@ const Story = ({ epgUrl }: StoryProps) => {
     return <p>{error.message}</p>;
   }
 
-  return <Guide epg={data} />;
+  const mockedLogoChannels = data.channels.map((channel) => {
+    return {
+      ...channel,
+      images: {
+        logo: `http://127.0.0.1:8080/logo_${channel.id}.png`,
+      },
+    };
+  });
+
+  const mockedData = {
+    channels: mockedLogoChannels,
+  };
+
+  return <Guide epg={mockedData} />;
 };
 
 export default {
