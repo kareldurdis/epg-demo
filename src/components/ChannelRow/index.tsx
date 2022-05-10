@@ -11,7 +11,7 @@ const ChannelRow = ({ schedules }: ChannelRowProps) => {
   return (
     <div className={classes.channelRow}>
       {schedules.map(({ title, start, end }) => {
-        return <Show title={title} start={start} end={end} />;
+        return <Show key={`${start}-${end}-${title}`} title={title} start={start} end={end} />;
       })}
     </div>
   );

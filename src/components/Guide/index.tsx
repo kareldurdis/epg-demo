@@ -24,18 +24,20 @@ const Guide = ({ epg }: Props) => {
   });
 
   return (
-    <div className={classes.guide}>
-      <div className={classes.channelColumn}>
-        <ChannelColumn>
-          {channels.map(({ logo, name }) => (
-            <Channel logo={logo} name={name} />
-          ))}
-        </ChannelColumn>
-      </div>
-      <div className={classes.schedules}>
-        {schedules.map((channel) => {
-          return <ChannelRow schedules={channel.schedules} />;
-        })}
+    <div className={classes.container}>
+      <div className={classes.guide}>
+        <div className={classes.channelColumn}>
+          <ChannelColumn>
+            {channels.map(({ logo, name }) => (
+              <Channel key={name} logo={logo} name={name} />
+            ))}
+          </ChannelColumn>
+        </div>
+        <div className={classes.schedules}>
+          {schedules.map((channel, index) => {
+            return <ChannelRow key={channels[index].name} schedules={channel.schedules} />;
+          })}
+        </div>
       </div>
     </div>
   );

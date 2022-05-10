@@ -1,6 +1,14 @@
+.container {
+  position: relative;
+  width: 95vw;
+  height: 95vh;
+  overflow: auto;
+}
+
 .guide {
   display: flex;
   flex-direction: row;
+  overflow: auto;
 }
 .channelColumn {
   position: absolute;
