@@ -1,11 +1,16 @@
 import React from 'react';
 import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { EPG } from '../../hooks/useEpg';
 import * as classes from './styles.module.css';
 import ChannelRow, { ChannelRowProps } from '../ChannelRow';
 import Channel, { ChannelProps } from '../Channel';
 import ChannelColumn from '../ChannelColumn';
 import TimeRow from '../TimeRow';
+import {MINUTE_SIZE} from "../../utils/constants";
+import LiveIndicator from "../LiveIndicator";
+
+dayjs.extend(customParseFormat);
 
 type Props = {
   epg: EPG;
@@ -41,6 +46,10 @@ const Guide = ({ epg }: Props) => {
     }
   });
 
+  const minutesFromStart = dayjs().diff(dayjs(`${startHour}:00:00`, 'H:mm:ss'), 'minutes');
+  // const liveOffset = minutesFromStart * MINUTE_SIZE;
+  const liveOffset = 200;
+
   return (
     <div className={classes.container}>
       <div className={classes.guide}>
@@ -52,6 +61,7 @@ const Guide = ({ epg }: Props) => {
           </ChannelColumn>
         </div>
         <div>
+          <LiveIndicator style={{ position: 'absolute', left: liveOffset }} />
           <TimeRow startHour={startHour} endHour={endHour} />
           {schedules.map((channel, index) => {
             return (
