@@ -1,6 +1,7 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import classNames from 'classnames';
+import { MINUTE_SIZE } from '../../utils/constants';
 import * as classes from './styles.module.css';
 
 export type ShowProps = {
@@ -8,8 +9,6 @@ export type ShowProps = {
   start: string;
   end: string;
 };
-
-const MINUTE_SIZE = 9;
 
 const Show = ({ title, start, end }: ShowProps) => {
   const startDate = dayjs(start);

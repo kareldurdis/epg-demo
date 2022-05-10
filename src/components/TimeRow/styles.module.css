@@ -1,0 +1,36 @@
+.timeRow {
+  display: flex;
+  flex-direction: row;
+  background-color: #1a1a1a;
+  width: 100%;
+}
+.hourBox {
+  height: 80px;
+  border-top: 1px solid #444444;
+  border-bottom: 1px solid #444444;
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.hourBox:first-child {
+  margin-left: 150px;
+}
+
+.marker {
+  width: 1px;
+  background-color: #535353;
+  height: 16px;
+}
+.time {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, serif;
+  color: white;
+  transform: translateX(-50%);
+}

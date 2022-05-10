@@ -4,5 +4,6 @@
   height: 130px;
   box-sizing: content-box;
   border-bottom: 1px solid #444444;
+  border-left: 1px solid #444444;
   background-color: #090909;
 }

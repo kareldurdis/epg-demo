@@ -8,6 +8,9 @@
   align-items: center;
   border-bottom: 1px solid #444444;
   box-sizing: content-box;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .channel img {

@@ -12,7 +12,12 @@
 }
 .channelColumn {
   position: absolute;
+  padding-top: 80px;
 }
-.schedules {
-  margin-left: 150px;
+
+.scheduleLine {
+  padding-left: 150px;
+}
+.timeRow {
+  display: flex;
 }
