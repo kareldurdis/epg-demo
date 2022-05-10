@@ -1,0 +1,10 @@
+.guide {
+  display: flex;
+  flex-direction: row;
+}
+.channelColumn {
+  position: absolute;
+}
+.schedules {
+  margin-left: 150px;
+}

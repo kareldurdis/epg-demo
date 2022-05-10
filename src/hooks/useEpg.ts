@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
 
-type Schedule = {
+export type Schedule = {
   title: string;
   id: string;
   start: string;
@@ -17,7 +17,7 @@ type Channel = {
   schedules: Schedule[];
 };
 
-type EPG = {
+export type EPG = {
   channels: Channel[];
 };
 

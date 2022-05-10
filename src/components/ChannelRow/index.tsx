@@ -3,7 +3,7 @@ import Show from '../Show';
 import { Schedule } from '../../hooks/useEpg';
 import * as classes from './styles.module.css';
 
-type ChannelRowProps = {
+export type ChannelRowProps = {
   schedules: Schedule[];
 };
 
