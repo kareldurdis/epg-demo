@@ -1,5 +1,6 @@
 import Guide from './components/Guide';
+import { EPG } from './hooks/useEpg';
 
-export { Guide };
+export type { EPG };
 
 export default Guide;
