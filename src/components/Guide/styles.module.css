@@ -1,8 +1,6 @@
 .container {
   position: relative;
-  width: 95vw;
-  height: 95vh;
-  overflow: auto;
+  height: 100vh;
 }
 
 .guide {
@@ -27,7 +25,7 @@
 }
 
 .nowButton {
-  position: absolute;
+  position: fixed;
   right: 40px;
   bottom: 40px;
   background-color: #e1a21e;

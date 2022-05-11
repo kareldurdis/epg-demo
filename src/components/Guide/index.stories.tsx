@@ -48,6 +48,9 @@ export default {
       disable: true,
     },
   },
+  parameters: {
+    layout: 'fullscreen',
+  },
 } as ComponentMeta<typeof Story>;
 
 export const Default = ({ epgUrl }: StoryProps) => {
