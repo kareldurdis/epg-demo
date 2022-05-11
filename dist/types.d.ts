@@ -12,7 +12,7 @@ type Channel = {
     };
     schedules: Schedule[];
 };
-type EPG = {
+export type EPG = {
     channels: Channel[];
 };
 type Props = {
