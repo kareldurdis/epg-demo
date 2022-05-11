@@ -74,3 +74,6 @@ If you're using `create-react-app`, you need to eject from CRA.
 ## Possible improvements
 ### Use some virtual list library i.e. react-window
 React-window is a library for rendering large lists. It maintains a virtual view of the list and renders only elements that should be visible. This dramatically improves performance on slower devices as it greatly reduces the number of actually rendered components and DOM nodes.
+### Replace CSS modules with something else
+- Next.js can't use CSS from packages even though it has support for CSS modules on its own. So you can't use this component in NextJS.
+- React-JSS or Styled components might be better.
