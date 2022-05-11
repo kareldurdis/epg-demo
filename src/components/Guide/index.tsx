@@ -7,8 +7,8 @@ import ChannelRow, { ChannelRowProps } from '../ChannelRow';
 import Channel, { ChannelProps } from '../Channel';
 import ChannelColumn from '../ChannelColumn';
 import TimeRow from '../TimeRow';
-import {MINUTE_SIZE} from "../../utils/constants";
-import LiveIndicator from "../LiveIndicator";
+import { MINUTE_SIZE } from '../../utils/constants';
+import LiveIndicator from '../LiveIndicator';
 
 dayjs.extend(customParseFormat);
 
@@ -47,8 +47,8 @@ const Guide = ({ epg }: Props) => {
   });
 
   const minutesFromStart = dayjs().diff(dayjs(`${startHour}:00:00`, 'H:mm:ss'), 'minutes');
-  // const liveOffset = minutesFromStart * MINUTE_SIZE;
-  const liveOffset = 200;
+  // 150 is width of the ChannelColumn
+  const liveOffset = minutesFromStart * MINUTE_SIZE + 150;
 
   return (
     <div className={classes.container}>
@@ -60,7 +60,7 @@ const Guide = ({ epg }: Props) => {
             ))}
           </ChannelColumn>
         </div>
-        <div>
+        <div className={classes.timeRowContainer}>
           <LiveIndicator style={{ position: 'absolute', left: liveOffset }} />
           <TimeRow startHour={startHour} endHour={endHour} />
           {schedules.map((channel, index) => {

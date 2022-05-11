@@ -13,6 +13,7 @@
 .channelColumn {
   position: absolute;
   padding-top: 80px;
+  z-index: 100;
 }
 
 .scheduleLine {
@@ -20,4 +21,7 @@
 }
 .timeRow {
   display: flex;
+}
+.timeRowContainer {
+  position: relative;
 }

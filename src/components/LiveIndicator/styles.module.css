@@ -3,8 +3,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100% - 5px);
   align-items: center;
+  padding-top: 5px;
 }
 
 .needle {

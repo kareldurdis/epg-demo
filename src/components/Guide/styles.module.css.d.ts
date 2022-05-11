@@ -4,5 +4,6 @@ declare const styles: {
   readonly channelColumn: string;
   readonly scheduleLine: string;
   readonly timeRow: string;
+  readonly timeRowContainer: string;
 };
 export = styles;
