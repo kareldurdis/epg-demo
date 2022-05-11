@@ -5,5 +5,6 @@ declare const styles: {
   readonly scheduleLine: string;
   readonly timeRow: string;
   readonly timeRowContainer: string;
+  readonly nowButton: string;
 };
 export = styles;

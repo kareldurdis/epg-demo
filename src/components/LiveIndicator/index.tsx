@@ -5,13 +5,13 @@ type LiveIndicatorProps = {
   style?: CSSProperties;
 };
 
-const LiveIndicator = ({ style }: LiveIndicatorProps) => {
+const LiveIndicator = React.forwardRef<HTMLDivElement, LiveIndicatorProps>(({ style }, ref) => {
   return (
-    <div className={classes.container} style={style}>
+    <div className={classes.container} style={style} ref={ref}>
       <div className={classes.needle} />
       <div className={classes.line} />
     </div>
   );
-};
+});
 
 export default LiveIndicator;

@@ -15,6 +15,7 @@ const TimeRow = ({ startHour, endHour }: TimeRowProps) => {
       <div
         className={classes.hourBox}
         style={{ width: hourWidth, maxWidth: hourWidth, minWidth: hourWidth }}
+        key={i}
       >
         <span className={classes.time}>{i}:00</span>
         <div className={classes.marker} />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { EPG } from '../../hooks/useEpg';
@@ -17,7 +17,7 @@ type Props = {
 };
 
 const Guide = ({ epg }: Props) => {
-  console.log(epg);
+  const liveRef = useRef<HTMLDivElement>(null);
 
   const channels: ChannelProps[] = [];
   const schedules: ChannelRowProps[] = [];
@@ -50,6 +50,14 @@ const Guide = ({ epg }: Props) => {
   // 150 is width of the ChannelColumn
   const liveOffset = minutesFromStart * MINUTE_SIZE + 150;
 
+  const handleNowButtonClick = () => {
+    liveRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.guide}>
@@ -61,7 +69,7 @@ const Guide = ({ epg }: Props) => {
           </ChannelColumn>
         </div>
         <div className={classes.timeRowContainer}>
-          <LiveIndicator style={{ position: 'absolute', left: liveOffset }} />
+          <LiveIndicator style={{ left: liveOffset }} ref={liveRef} />
           <TimeRow startHour={startHour} endHour={endHour} />
           {schedules.map((channel, index) => {
             return (
@@ -73,6 +81,9 @@ const Guide = ({ epg }: Props) => {
             );
           })}
         </div>
+        <button className={classes.nowButton} onClick={handleNowButtonClick} type="button">
+          Now
+        </button>
       </div>
     </div>
   );

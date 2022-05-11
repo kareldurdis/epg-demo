@@ -6,6 +6,7 @@
   height: calc(100% - 5px);
   align-items: center;
   padding-top: 5px;
+  position: absolute;
 }
 
 .needle {
