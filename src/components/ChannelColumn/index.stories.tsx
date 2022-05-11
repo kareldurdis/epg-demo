@@ -12,7 +12,7 @@ const channels = Array(10).fill(
 );
 
 export default {
-  title: 'Guide/ChannelColumn',
+  title: 'Components/ChannelColumn',
   component: ChannelColumn,
 } as ComponentMeta<typeof ChannelColumn>;
 

@@ -98,6 +98,7 @@
 }
 
 .SDDS_G_channelColumn {
+  width: 150px;
   flex-direction: column;
   display: flex;
 }

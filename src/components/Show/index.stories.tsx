@@ -3,7 +3,7 @@ import { ComponentMeta } from '@storybook/react';
 import Show, { ShowProps } from './index';
 
 export default {
-  title: 'Guide/Show',
+  title: 'Components/Show',
   component: Show,
   argTypes: {
     title: {

@@ -57,9 +57,9 @@ npm run start:mock-images
 
 ## Webpack 5
 This package is build as ESM module. There's a problem with one of the imports of `dayjs` library if you use the package in a project with Webpack 5 (i.e. `create-react-app`). You might get following error:
-```
-"BREAKING CHANGE: The request failed to resolve only because it was resolved as fully specified (probably because the origin is strict EcmaScript Module, e. g. a module with javascript mimetype, a '.mjs' file, or a '.js' file where the package.json contains '"type": "module"')."
-```
+
+> "BREAKING CHANGE: The request failed to resolve only because it was resolved as fully specified (probably because the origin is strict EcmaScript Module, e. g. a module with javascript mimetype, a '.mjs' file, or a '.js' file where the package.json contains '"type": "module"')."
+
 You need to update js loader in your webpack configuration, i.e.
 ```typescript
 {

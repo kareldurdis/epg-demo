@@ -3,7 +3,7 @@ import { ComponentMeta } from '@storybook/react';
 import TimeRow from './index';
 
 export default {
-  title: 'Guide/TimeRow',
+  title: 'Components/TimeRow',
   component: TimeRow,
 } as ComponentMeta<typeof TimeRow>;
 

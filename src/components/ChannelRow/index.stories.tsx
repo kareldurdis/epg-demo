@@ -4,7 +4,7 @@ import ChannelRow from './index';
 import data from './data.json';
 
 export default {
-  title: 'Guide/ChannelRow',
+  title: 'Components/ChannelRow',
   component: ChannelRow,
 } as ComponentMeta<typeof ChannelRow>;
 

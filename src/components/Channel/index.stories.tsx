@@ -3,7 +3,7 @@ import { ComponentMeta } from '@storybook/react';
 import Channel, { ChannelProps } from './index';
 
 export default {
-  title: 'Guide/Channel',
+  title: 'Components/Channel',
   component: Channel,
   argTypes: {
     logo: {

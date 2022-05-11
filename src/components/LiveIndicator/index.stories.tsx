@@ -3,7 +3,7 @@ import { ComponentMeta } from '@storybook/react';
 import LiveIndicator from './index';
 
 export default {
-  title: 'Guide/LiveIndicator',
+  title: 'Components/LiveIndicator',
   component: LiveIndicator,
 } as ComponentMeta<typeof LiveIndicator>;
 
