@@ -1,0 +1,165 @@
+.SIuwVW_container {
+  height: 100vh;
+  position: relative;
+}
+
+.SIuwVW_guide {
+  flex-direction: row;
+  display: flex;
+  overflow: auto;
+}
+
+.SIuwVW_channelColumn {
+  z-index: 100;
+  padding-top: 80px;
+  position: absolute;
+}
+
+.SIuwVW_scheduleLine {
+  padding-left: 150px;
+}
+
+.SIuwVW_timeRow {
+  display: flex;
+}
+
+.SIuwVW_timeRowContainer {
+  position: relative;
+}
+
+.SIuwVW_nowButton {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #e1a21e;
+  border: 0;
+  border-radius: 5px;
+  margin: 0;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.AUQOOG_show {
+  height: 130px;
+  box-sizing: border-box;
+  background-color: #090909;
+  border-right: 1px solid #444;
+  flex-direction: column;
+  padding: 20px;
+  font-family: Arial, serif;
+  font-size: 16px;
+  display: flex;
+}
+
+.AUQOOG_active {
+  background-color: #363636;
+}
+
+.AUQOOG_title {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.AUQOOG_time {
+  color: #9c9c9c;
+}
+
+.aKAv9a_channelRow {
+  height: 130px;
+  box-sizing: content-box;
+  background-color: #090909;
+  border-bottom: 1px solid #444;
+  border-left: 1px solid #444;
+  flex-direction: row;
+  display: flex;
+}
+
+.UFROqq_channel {
+  width: 150px;
+  height: 130px;
+  box-sizing: content-box;
+  color: #fff;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #444;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+}
+
+.UFROqq_channel img {
+  max-width: 100px;
+  max-height: 40px;
+}
+
+.SDDS_G_channelColumn {
+  flex-direction: column;
+  display: flex;
+}
+
+.aBd_cG_timeRow {
+  width: 100%;
+  background-color: #1a1a1a;
+  flex-direction: row;
+  display: flex;
+}
+
+.aBd_cG_hourBox {
+  height: 80px;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  flex-direction: column;
+  place-content: flex-end;
+  align-items: flex-start;
+  display: flex;
+}
+
+.aBd_cG_hourBox:first-child {
+  margin-left: 150px;
+}
+
+.aBd_cG_marker {
+  width: 1px;
+  height: 16px;
+  background-color: #535353;
+}
+
+.aBd_cG_time {
+  color: #fff;
+  font-family: Arial, serif;
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  transform: translateX(-50%);
+}
+
+.rsWLSG_container {
+  height: calc(100% - 5px);
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+  display: flex;
+  position: absolute;
+}
+
+.rsWLSG_needle {
+  width: 8px;
+  height: 70px;
+  background-color: #dea200;
+  border-radius: 4px;
+}
+
+.rsWLSG_line {
+  width: 1px;
+  height: 100%;
+  background-color: #dea200;
+}
+
+/*# sourceMappingURL=main.css.map */

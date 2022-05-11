@@ -15,7 +15,8 @@
     "watch": "parcel watch",
     "start:mock-images": "http-server ./mocks",
     "start:mock-service": "./node_modules/.bin/osprey-mock-service -f ./node_modules/nm-mock-api/demo.raml -p 1337 --cors",
-    "start:mock-api": "node ./node_modules/nm-mock-api/scripts/updateEpg.js && npm run start:mock-service"
+    "start:mock-api": "node ./node_modules/nm-mock-api/scripts/updateEpg.js && npm run start:mock-service",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -60,7 +61,8 @@
     "postcss-nested": "^5.0.6",
     "prettier": "^2.6.2",
     "storybook-css-modules-preset": "^1.1.1",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "axios": "^0.27.2",
