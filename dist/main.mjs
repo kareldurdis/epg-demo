@@ -1,6 +1,6 @@
 import "./main.css";
 import {jsx as $hgUW1$jsx, jsxs as $hgUW1$jsxs} from "react/jsx-runtime";
-import $hgUW1$react, {useRef as $hgUW1$useRef} from "react";
+import $hgUW1$react, {useRef as $hgUW1$useRef, useState as $hgUW1$useState, useEffect as $hgUW1$useEffect} from "react";
 import $hgUW1$dayjs from "dayjs";
 import $hgUW1$dayjsplugincustomParseFormat from "dayjs/plugin/customParseFormat";
 import $hgUW1$classnames from "classnames";
@@ -206,6 +206,7 @@ var $0ae79f68d400b0f7$export$2e2bcd8739ae039 = $0ae79f68d400b0f7$var$LiveIndicat
 $hgUW1$dayjs.extend($hgUW1$dayjsplugincustomParseFormat);
 const $5f9008890260250b$var$Guide = ({ epg: epg  })=>{
     const liveRef = $hgUW1$useRef(null);
+    const [liveOffset, setLiveOffset] = $hgUW1$useState(0);
     const channels = [];
     const schedules = [];
     let startHour = 0;
@@ -228,9 +229,18 @@ const $5f9008890260250b$var$Guide = ({ epg: epg  })=>{
             if (lastHour > endHour) endHour = lastHour;
         }
     });
-    const minutesFromStart = $hgUW1$dayjs().diff($hgUW1$dayjs(`${startHour}:00:00`, 'H:mm:ss'), 'minutes');
-    // 150 is width of the ChannelColumn
-    const liveOffset = minutesFromStart * $1fbad53519a9d314$export$be15ff444ccef421 + 150;
+    // Update the live indicator position every 9/60th of a minute (to move it by 1 pixel)
+    $hgUW1$useEffect(()=>{
+        const interval = setInterval(()=>{
+            const secondsFromStart = $hgUW1$dayjs().diff($hgUW1$dayjs(`${startHour}:00:00`, 'H:mm:ss'), 'seconds');
+            // 150 is width of the ChannelColumn
+            const offset = Math.floor(secondsFromStart * $1fbad53519a9d314$export$be15ff444ccef421 / 60) + 150;
+            setLiveOffset(offset);
+        }, 1000);
+        return ()=>{
+            clearInterval(interval);
+        };
+    }, []);
     const handleNowButtonClick = ()=>{
         liveRef.current.scrollIntoView({
             behavior: 'smooth',
@@ -256,7 +266,7 @@ const $5f9008890260250b$var$Guide = ({ epg: epg  })=>{
                 /*#__PURE__*/ $hgUW1$jsxs("div", {
                     className: $2fed32a54a53d836$export$62c3fdea1232bbe6,
                     children: [
-                        /*#__PURE__*/ $hgUW1$jsx($0ae79f68d400b0f7$export$2e2bcd8739ae039, {
+                        liveOffset > 0 && /*#__PURE__*/ $hgUW1$jsx($0ae79f68d400b0f7$export$2e2bcd8739ae039, {
                             style: {
                                 left: liveOffset
                             },

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { EPG } from '../../hooks/useEpg';
@@ -18,6 +18,7 @@ type Props = {
 
 const Guide = ({ epg }: Props) => {
   const liveRef = useRef<HTMLDivElement>(null);
+  const [liveOffset, setLiveOffset] = useState<number>(0);
 
   const channels: ChannelProps[] = [];
   const schedules: ChannelRowProps[] = [];
@@ -46,9 +47,18 @@ const Guide = ({ epg }: Props) => {
     }
   });
 
-  const minutesFromStart = dayjs().diff(dayjs(`${startHour}:00:00`, 'H:mm:ss'), 'minutes');
-  // 150 is width of the ChannelColumn
-  const liveOffset = minutesFromStart * MINUTE_SIZE + 150;
+  // Update the live indicator position every 9/60th of a minute (to move it by 1 pixel)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const secondsFromStart = dayjs().diff(dayjs(`${startHour}:00:00`, 'H:mm:ss'), 'seconds');
+      // 150 is width of the ChannelColumn
+      const offset = Math.floor((secondsFromStart * MINUTE_SIZE) / 60) + 150;
+      setLiveOffset(offset);
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   const handleNowButtonClick = () => {
     liveRef.current.scrollIntoView({
@@ -69,7 +79,7 @@ const Guide = ({ epg }: Props) => {
           </ChannelColumn>
         </div>
         <div className={classes.timeRowContainer}>
-          <LiveIndicator style={{ left: liveOffset }} ref={liveRef} />
+          {liveOffset > 0 && <LiveIndicator style={{ left: liveOffset }} ref={liveRef} />}
           <TimeRow startHour={startHour} endHour={endHour} />
           {schedules.map((channel, index) => {
             return (
