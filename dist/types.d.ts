@@ -18,8 +18,7 @@ type EPG = {
 type Props = {
     epg: EPG;
 };
-export const Guide: ({ epg }: Props) => JSX.Element;
-export default Guide;
+declare const Guide: ({ epg }: Props) => JSX.Element;
 export default Guide;
 
 //# sourceMappingURL=types.d.ts.map
