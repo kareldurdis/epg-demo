@@ -5,17 +5,6 @@ import $hgUW1$dayjs from "dayjs";
 import $hgUW1$dayjsplugincustomParseFormat from "dayjs/plugin/customParseFormat";
 import $hgUW1$classnames from "classnames";
 
-function $parcel$defineInteropFlag(a) {
-  Object.defineProperty(a, '__esModule', {value: true, configurable: true});
-}
-function $parcel$export(e, n, v, s) {
-  Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
-}
-var $5f9008890260250b$exports = {};
-
-$parcel$defineInteropFlag($5f9008890260250b$exports);
-
-$parcel$export($5f9008890260250b$exports, "default", () => $5f9008890260250b$export$2e2bcd8739ae039);
 
 
 
@@ -298,6 +287,8 @@ const $5f9008890260250b$var$Guide = ({ epg: epg  })=>{
 var $5f9008890260250b$export$2e2bcd8739ae039 = $5f9008890260250b$var$Guide;
 
 
+var $149c1bd638913645$export$2e2bcd8739ae039 = $5f9008890260250b$export$2e2bcd8739ae039;
 
 
+export {$149c1bd638913645$export$2e2bcd8739ae039 as default, $5f9008890260250b$export$2e2bcd8739ae039 as Guide};
 //# sourceMappingURL=module.js.map

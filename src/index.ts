@@ -1,1 +1,5 @@
-export * from './components/Guide';
+import Guide from './components/Guide';
+
+export { Guide };
+
+export default Guide;

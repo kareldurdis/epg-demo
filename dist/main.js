@@ -5,36 +5,20 @@ var $8zHUo$dayjs = require("dayjs");
 var $8zHUo$dayjsplugincustomParseFormat = require("dayjs/plugin/customParseFormat");
 var $8zHUo$classnames = require("classnames");
 
-function $parcel$exportWildcard(dest, source) {
-  Object.keys(source).forEach(function(key) {
-    if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) {
-      return;
-    }
-
-    Object.defineProperty(dest, key, {
-      enumerable: true,
-      get: function get() {
-        return source[key];
-      }
-    });
-  });
-
-  return dest;
-}
-function $parcel$interopDefault(a) {
-  return a && a.__esModule ? a.default : a;
-}
 function $parcel$defineInteropFlag(a) {
   Object.defineProperty(a, '__esModule', {value: true, configurable: true});
 }
 function $parcel$export(e, n, v, s) {
   Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
 }
-var $9e9c494d63e0cbec$exports = {};
+function $parcel$interopDefault(a) {
+  return a && a.__esModule ? a.default : a;
+}
 
-$parcel$defineInteropFlag($9e9c494d63e0cbec$exports);
+$parcel$defineInteropFlag(module.exports);
 
-$parcel$export($9e9c494d63e0cbec$exports, "default", () => $9e9c494d63e0cbec$export$2e2bcd8739ae039);
+$parcel$export(module.exports, "default", () => $882b6d93070905b3$export$2e2bcd8739ae039);
+$parcel$export(module.exports, "Guide", () => $9e9c494d63e0cbec$export$2e2bcd8739ae039);
 
 
 
@@ -317,7 +301,7 @@ const $9e9c494d63e0cbec$var$Guide = ({ epg: epg  })=>{
 var $9e9c494d63e0cbec$export$2e2bcd8739ae039 = $9e9c494d63e0cbec$var$Guide;
 
 
-$parcel$exportWildcard(module.exports, $9e9c494d63e0cbec$exports);
+var $882b6d93070905b3$export$2e2bcd8739ae039 = $9e9c494d63e0cbec$export$2e2bcd8739ae039;
 
 
 //# sourceMappingURL=main.js.map
